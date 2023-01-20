@@ -14,24 +14,6 @@ private with sharing class LeadTriggerTest {
     }
 
     @IsTest
-    static void methodName(){
-       Account anAccount = Build.anAccount()
-        .whithCampoCustom(555555).build();
-
-        System.debug(anAccount.Name);
-        Lead aLead = new Lead(
-            LastName = 'Maximiliano'
-        );
-        insert anAccount;
-        Test.startTest();
-        insert aLead;
-        aLead.FirstName = 'Maximiliano';
-        update aLead;
-        Test.stopTest();
-
-    }
-
-    @IsTest
     static void cuandoSeInsertaUnProspectoCuyoEmailEsIgualAlDeOtroRegistroDeLaBaseDeDatosRecibimosUnError(){
         
         Lead aLead = new Lead(

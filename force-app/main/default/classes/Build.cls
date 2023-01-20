@@ -3,17 +3,11 @@ public class Build {
 
     public class AccountBuilder{
         private Account obj = new Account(
-            Name = 'STRING',
-            campo_custom__c = 333333
+            Name = 'STRING'
         );
 
         public AccountBuilder whithName(String value){
             this.obj.Name = value;
-            return this;
-        }
-
-        public AccountBuilder whithCampoCustom(Integer value){
-            this.obj.campo_custom__c = value;
             return this;
         }
 
