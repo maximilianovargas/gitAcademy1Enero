@@ -5,7 +5,8 @@ private with sharing class AccountMessageControllerTest {
         List<Account> accounts = new List<Account>();
         for (Integer i = 0; i < 10; i++) {
             accounts.add(
-                Build.anAccount().build()
+                Build.anAccount().whithName('Globant')
+                .build()
             );
         }
 
