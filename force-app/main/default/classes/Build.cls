@@ -3,7 +3,8 @@ public class Build {
 
     public class AccountBuilder{
         private Account obj = new Account(
-            Name = 'STRING'
+            Name = 'STRING',
+            CustomerPriority__c = 'data'
         );
 
         public AccountBuilder whithName(String value){
@@ -11,15 +12,19 @@ public class Build {
             return this;
         }
 
-        public AccountBuilder withParent(Account value){
-            this.obj.ParentId = value.Id;
+        public AccountBuilder whithCustomerPriority(String value){
+            this.obj.CustomerPriority__c = value;
             return this;
         }
+
+        
 
         public AccountBuilder withActive(String value){
             this.obj.Active__c = value;
             return this;
         }
+
+        
 
         public Account build(){
             return obj;
